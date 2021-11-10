@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class work</title>
+</head>
+<body>
+<script>
+
+    //Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
+
+    let num10 =[ 20, 50, 11, 125, 10, -200, 111, 21, 1, 1 ];
+    function arraySume(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        console.log(sum);
+    }
+    arraySume(num10);
+
+    //Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
+
+
+    // let book = {
+    //     name: 'lord of the rings',
+    //     pages: 350,
+    //     genre: 'fantasy'
+    //
+    // }
+    // console.log(book);
+
+
+    //Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
+
+
+    let book = {
+        name: 'lord of the rings',
+        pages: 350,
+        genre: 'fantasy',
+        author: "J. R. R. Tolkien"
+
+    }
+    console.log(book);
+
+    //Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
+    let book2 = {
+        name: ' rings',
+        pages: 150,
+        genre: 'fantasy',
+        author: " Tolkien"
+
+    };
+    let book3 = {
+        name: ' rings sdf sdf',
+        pages: 150,
+        genre: 'fantasy fdsfsdf',
+        author: " Tolkiendfsfsd"
+
+    };
+    let allBook = [
+        book,
+        book2,
+        book3,
+
+
+
+    ];
+    console.log([allBook]);
+
+    // Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+    // Значення площі зберігати в змінній s.
+
+
+    // let heigth = prompt("висота прямокутника");
+    // let wigth = prompt("ширина прямокутника");
+    // let s = heigth * wigth;
+    // console.log(s);
+
+
+    // Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
+    // результат помістіть у змінну v.
+
+
+    // const pi = 3.14;
+    // let heightC = prompt("висота циліндра");
+    // let r = prompt("радіус циліндра") ** 2;
+    // let v = pi * r * heightC;
+    // console.log(v);
+
+
+    //У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
+    // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
+
+    let n = 3;
+    let m = 4;
+    let  k = Math.sqrt((n**2) +(m**2));
+    console.log(k);
+
+
+
+
+
+</script>
+</body>
+</html>
