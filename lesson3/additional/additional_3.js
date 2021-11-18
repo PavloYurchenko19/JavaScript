@@ -131,7 +131,7 @@ document.write(`</div>`);
 
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 for (let i = 0; i <= emptyArr2.length-1 ; i++) {
-    if(emptyArr2[i+1] % 2 === 0){
+    if(emptyArr2[i+1] % 2 === 0 && emptyArr2[i+1] !==0){
         document.write(`--- ${emptyArr2[i]}---`)
     }
 
