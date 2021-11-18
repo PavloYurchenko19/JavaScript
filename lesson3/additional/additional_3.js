@@ -193,10 +193,8 @@ let sum = +"";
 let price = [100, 250, 50, 168, 120, 345, 188];
 for ( i = 0; i <= price.length-1 ; i++) {
     sum += price[i] ;
-
-
-
 }
+sum = sum / i;
 console.log(sum);
 
 
