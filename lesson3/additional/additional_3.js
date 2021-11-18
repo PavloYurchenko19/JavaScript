@@ -184,94 +184,20 @@
 //     if(emptyArr3[i+1] % 2 === 0){
 //         document.write(`--- ${emptyArr3[i]}---`)
 //     }
-//
+
 // }
 
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
+// let sum = +""
 // let price = [100, 250, 50, 168, 120, 345, 188];
-// let emt = [];
-// let emt1 = [];
-// let end = [];
-//
-// for (let i = 0, x =  1; i <=price.length-2;   x+1) {
-//
-//         let num = i;
-//         let num2 = x;
-//         let result = price[num] + price[num2];
-//         document.write(`<div>`);
-//         document.write(price[i])
-//         document.write(`</div>`);
-//         document.write(`<div>`);
-//         document.write(price[x])
-//         document.write(`</div>`);
-//         document.write(`<div>`);
-//         document.write(`---- ${result}-------`)
-//         document.write(`</div>`);
-//         emt.push(result)
-//         price.splice(0,2);
-//         console.log(typeof num2);
-//         if (price.length  === 1 ){
-//             emt.push(price[num]);
-//             price.splice(0,1);
-//             for (let j = 0; j <=emt.length-1; j++) {
-//                 let result2 = emt[j] +emt[j+1]
-//                 document.write(result2)
-//                 emt.splice(0,2  )
-//                 for (let k = 0 , h = 1; k <=emt.length-1   ; k++, h++) {
-//                     console.log(emt[k]);
-//                     console.log(emt[h]);
-//                     let result1 = emt[k] + emt[h];
-//                     emt1.push(result1)
-//                     emt.splice(0,1)
-//                     if (emt1.length = 2){
-//                         let end1 = result1 + result2;
-//                         end.push(end1);
-//                         console.log(end1);
-//                     }
-//
-//                 }
-//             }
+// for ( i = 0; i <= price.length-1 ; i++) {
+//     sum += price[i] ;
 //
 //
-//         }else if ( price.length === 0){
-//             for (let j = 0; j <=emt.length-1 ; j++) {
-//                 let result2 = emt[j] +emt[j+1]
-//                 document.write(result2)
-//                 emt.splice(0,2 )
 //
-//                 for (let k = 0 , h = 1; k <=emt.length-1   ; k++, h++) {
-//                     console.log(emt[k]);
-//                     console.log(emt[h]);
-//                     let result1 = emt[k] + emt[h];
-//                     emt1.push(result1)
-//                     emt.splice(0,1)
-//                     if (emt1.length = 2){
-//                         let end1 = result1 + result2;
-//                         end.push(end1);
-//                         console.log(end1);
-//                     }
-//
-//
-//                 }
-//             }
-//
-//         }
 // }
-//
-// document.write(`<div>`);
-// document.write(emt1)
-// document.write(`</div>`);
-// document.write(`<div>`);
-// document.write(end)
-// document.write(`</div>`);
-
-
-
-
-
-
-
+// console.log(sum);
 
 
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
@@ -373,27 +299,28 @@
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-let arra = [ 'a', 'b', 'c'] ;
-let word = '';
-for ( i = 0; i <= arra.length-1 ; i++) {
-    word += arra[i] ;
+// let arra = [ 'a', 'b', 'c'] ;
+// let word = '';
+// for ( i = 0; i <= arra.length-1 ; i++) {
+//     word += arra[i] ;
+//
+//
+//
+// }
+// console.log(word);
+// let word2 = '';
+// let w = 0;
+// while (w <= arra.length-1){
+//
+//
+//     word2 += arra[w] ;
+//
+//     w++;
+// }
+// console.log(word2);
+// let word3 =''
+// for (let string of arra) {
+//     word3 += string;
+// }
+// console.log(word3);
 
-
-
-}
-console.log(word);
-let word2 = '';
-let w = 0;
-while (w <= arra.length-1){
-
-
-    word2 += arra[w] ;
-
-    w++;
-}
-console.log(word2);
-let word3 =''
-for (let string of arra) {
-    word3 += string;
-}
-console.log(word3);
