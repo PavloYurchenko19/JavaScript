@@ -189,13 +189,13 @@ for (let i = 0; i <= emptyArr3.length-1 ; i++) {
 
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
-let sum = +"";
+let sum = 0;
 let price = [100, 250, 50, 168, 120, 345, 188];
 for ( i = 0; i <= price.length-1 ; i++) {
     sum += price[i] ;
 }
-sum = sum / i;
-console.log(sum);
+let result = sum / price.length;
+console.log(result);
 
 
 
