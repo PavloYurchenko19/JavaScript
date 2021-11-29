@@ -63,16 +63,16 @@ class Client extends User {
     }
 }
 
-let client1 = new Client(1, "Pavlo", "Yurchenko", "yurchenkopavlo@gmail.com", "+380984902226",  {item : "smth",item2 : "sadasd" ,item3 : "sadasd", price : 20});
-let client2 = new Client(2,"Petro","Surota", "yurchenkopavlo@gmail.com","+3803545464654",{item : "smth",item2 : "sadasd" ,item3 : "sadasd",item4 : "sadasd" , price : 10});
-let client3 = new Client(3,"Andriy","jgjg", "yurchenkopavlo@gmail.com","+380984845454",{item : "smth" , price : 205});
-let client4 = new Client(4,"Vitaliy","Youds", "yurchenkopavlo@gmail.com","+38098484846",{item : "smth",item3 : "sadasd" , price : 40});
-let client5 = new Client(5,"Olya","Zelen", "yurchenkopavlo@gmail.com","+380984846555",{item : "smth" ,item2 : "sadasd" ,item3 : "sadasd",item4 : "sadasd" , price : 68});
-let client6 = new Client(6,"Vasya","Chtos", "yurchenkopavlo@gmail.com","+380959849846",{item : "smth" ,item2 : "sadasd" ,item3 : "sadasd",item4 : "sadasd" ,item21 : "sadasd" ,item6 : "sadasd",item31 : "sadasd" , price : 70});
-let client7 = new Client(7,"Kolya","Shooo", "yurchenkopavlo@gmail.com","+3809865+6",{item : "smth" , price : 27});
-let client8 = new Client(8,"Igor","Neznayko", "yurchenkopavlo@gmail.com","+386595902226",{item : "smth",item2 : "sadasd" ,item3 : "sadasd",item4 : "sadasd" , item5:544, price : 42});
-let client9 = new Client(9,"Lida","Petrova", "yurchenkopavlo@gmail.com","+3809846546",{item : "smth",item2 : "sadasd" ,item3 : "sadasd",item4 : "sadasd" ,item8 : "sadasd" ,item7 : "sadasd",item6 : "sadasd"  , price : 58});
-let client10 = new Client(10,"Masha","Yurcuk", "yurchenkopavlo@gmail.com","+38099846546",{item : "smth" , price : 77});
+let client1 = new Client(1, "Pavlo", "Yurchenko", "yurchenkopavlo@gmail.com", "+380984902226",  ["smth", "sadasd" ,"sadas"]);
+let client2 = new Client(2,"Petro","Surota", "yurchenkopavlo@gmail.com","+3803545464654",["smth", "sadasd" , "sadasd", "sadasd" , 10]);
+let client3 = new Client(3,"Andriy","jgjg", "yurchenkopavlo@gmail.com","+380984845454", ["smth" ,  205]);
+let client4 = new Client(4,"Vitaliy","Youds", "yurchenkopavlo@gmail.com","+38098484846", ["smth", "sadasd" , 40]);
+let client5 = new Client(5,"Olya","Zelen", "yurchenkopavlo@gmail.com","+380984846555", ["smth" ,"sadasd" ,"sadasd","sadasd" , 68]);
+let client6 = new Client(6,"Vasya","Chtos", "yurchenkopavlo@gmail.com","+380959849846", ["smth" , "sadasd" , "sadasd", "sadasd" , "sadasd" ,"sadasd", "sadasd" ,  70]);
+let client7 = new Client(7,"Kolya","Shooo", "yurchenkopavlo@gmail.com","+3809865+6", ["smth" ,  27]);
+let client8 = new Client(8,"Igor","Neznayko", "yurchenkopavlo@gmail.com","+386595902226", ["smth","sadasd" , "sadasd", "sadasd" , 544, 42]);
+let client9 = new Client(9,"Lida","Petrova", "yurchenkopavlo@gmail.com","+3809846546", ["smth", "sadasd" ,"sadasd","sadasd" , "sadasd" , "sadasd", "sadasd"  ,  58]);
+let client10 = new Client(10,"Masha","Yurcuk", "yurchenkopavlo@gmail.com","+38099846546", ["smth" ,  77]);
 
 
 let emptyArr2 = [];
