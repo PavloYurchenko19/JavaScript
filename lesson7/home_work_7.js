@@ -86,13 +86,5 @@ let sort = emptyArr2.sort((a, b) => {
     return a.order.length - b.order.length
 });
 console.log(sort);
-// emptyArr2.forEach((order) => {
-//     let fff = Object.values(order.order);
-//     console.log(fff.length);Z
-//     fff.sort((a, b) => {
-//         return b - a ;
-//     });
-//     return fff;
-//
-// });
+
 
