@@ -6,10 +6,10 @@
 //- створити функцію яка обчислює та повертає площу кола
 
 const PI =  3.14;
-// let sqCircle = (PI, r) => {
-//     return PI * (r**2)
-// };
-// document.write(sqCircle(PI, 5));
+let sqCircle = (PI, r) => {
+    return PI * (r**2)
+};
+document.write(sqCircle(PI, 7));
 
 
 // створити функцію яка обчислює та повертає площу циліндру
