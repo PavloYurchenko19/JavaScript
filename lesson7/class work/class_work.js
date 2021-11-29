@@ -20,7 +20,7 @@ class car {
     }
     // increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
     increaseMaxSpeed (newSpeed) {
-        this.maxSpeed = newSpeed;
+        this.maxSpeed += newSpeed;
         console.log(`Їдемо зі новою швидкістю ${this.maxSpeed} на годину`);
 
     }
@@ -58,7 +58,7 @@ let bmw =new car("BMW","WW",1999,250,3.5);
 console.log(bmw);
 bmw.drive(250)
 bmw.info()
-bmw.increaseMaxSpeed(300);
+bmw.increaseMaxSpeed(15);
 bmw.changeYear(2002);
 bmw.drive = bmw.addDriver("Pavlo")
 console.log(bmw);
@@ -87,8 +87,8 @@ function funCar(model, producer, year, maxSpeed, engine) {
     }
     // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
     this.increaseMaxSpeed = function (newSpeed) {
-        this.maxSpeed = newSpeed;
-        console.log(`Їдемо зі новою швидкістю ${this.maxSpeed} на годину`);
+        this.maxSpeed += newSpeed;
+        console.log(`Їдемо зі новою швидкістю ${this.maxSpeed}  на годину`);
     }
     // -- changeYear (newValue) - змінює рік випуску на значення newValue
     this.changeYear = function (newValue) {
@@ -121,7 +121,7 @@ console.log(car2);
 
 car2.drive()
 car2.info()
-car2.increaseMaxSpeed(378);
+car2.increaseMaxSpeed(10);
 car2.changeYear(3654)
 car2.drive = car2.addDriver("Pavlo")
 console.log(car2);
