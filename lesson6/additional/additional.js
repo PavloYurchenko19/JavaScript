@@ -129,3 +129,12 @@ let count = (str,stringsearch) => {
     console.log(kil);
 };
 count(str,"о"); // 5
+// - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
+//     let str = "Сила тяжести приложена к центру масс тела";
+// document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
+let cutStr = (str,n) => {
+    let ff =str.split(" ")
+    ff.splice(n)
+    document.write(ff.toString().replaceAll(",", " "));
+};
+ cutStr("Сила тяжести приложена к центру масс тела",5)
