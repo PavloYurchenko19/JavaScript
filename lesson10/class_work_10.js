@@ -38,7 +38,7 @@ f3.onsubmit = function (e) {
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
 // кинути алерт з попередженням.
 //     Перевірку робити при натисканні на кнопку
-let swearWords = ["блять", "сука", "гандон"];
+let swearWords = ["гівнюк", "пацюк", "свинота"];
 let swearW = document.forms.swearW;
 swearW.onsubmit = function (e) {
     e.preventDefault();
