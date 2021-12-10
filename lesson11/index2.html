@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let fav = localStorage.getItem("favorite");
+    let parse = JSON.parse(fav);
+    for (let parseElement of parse) {
+
+        let div = document.createElement("div");
+        div.append(parseElement)
+        document.body.append(div);
+    }
+</script>
+</body>
+</html>
