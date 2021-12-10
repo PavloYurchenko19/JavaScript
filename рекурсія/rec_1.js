@@ -6,7 +6,6 @@ let b = Math.round(Math.random() * 50);
 
 let recFun = function (a, b) {
     if (a < b) {
-
         a++
         console.log(a);
         recFun(a, b);
