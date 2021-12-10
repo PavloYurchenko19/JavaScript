@@ -5,15 +5,16 @@ let a = Math.round(Math.random() * 50);
 let b = Math.round(Math.random() * 50);
 
 let recFun = function (a, b) {
-console.log(a);
-
     if (a < b) {
+
         a++
-         recFun(a, b);
+        console.log(a);
+        recFun(a, b);
 
     }else if (b < a) {
         b++
         recFun(a, b);
+        console.log(b);
     }
 };
 recFun(a, b);
