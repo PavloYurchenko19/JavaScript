@@ -1,26 +1,22 @@
 // Даны два целых числа A и В (каждое в отдельной строке).
 // Выведите все числа от A до B включительно, в порядке возрастания,
 //     если A < B, или в порядке убывания в противном случае.
-// let a = Math.round(Math.random() * 50);
-// let b = Math.round(Math.random() * 50);
-//
-// let recFun = function (a, b) {
-// console.log(a);
-// console.log(b);
-//
-//     if (a < b) {
-//         a++
-//         return recFun(a, b);
-//         // for (let i = a; i <= b ; i++) {
-//         //
-//         //     console.log(i);
-//         // }
-//     }else if (b < a) {
-//         b++
-//         return recFun(a, b);
-//     }
-// };
-// recFun(a, b);
+let a = Math.round(Math.random() * 50);
+let b = Math.round(Math.random() * 50);
+
+let recFun = function (a, b) {
+console.log(a);
+
+    if (a < b) {
+        a++
+         recFun(a, b);
+
+    }else if (b < a) {
+        b++
+        recFun(a, b);
+    }
+};
+recFun(a, b);
 
 // Точная степень двойки
 // Дано натуральное число N.
@@ -161,41 +157,41 @@
 // Даны натуральные числа k и s. Определите, сколько существует k-значных натуральных чисел, сумма цифр которых равна s. Запись натурального числа не может начинаться с цифры 0.
 // В этой задаче можно использовать цикл для перебора всех цифр, стоящих на какой-либо позиции.
 
-let s = 9;
-
-let k = 0;
-
-function num(...num) {
-    for (let i = 0; i < num.length; i++) {
-        for (let j = 0; j < i; j++) {
-            if (num[i] + num[j] === s) {
-                console.log(num[i]);
-                console.log(num[j]);
-                // console.log(num[i] + num[j]);
-                k++
-                console.log("yes");
-            }
-        }
-    }
-}
-
-num(1, 2, 3, 4, 5, 6,4, 7, 9, 1, 6, 9, 2);
-console.log(k);
+// let s = 9;
+//
+// let k = 0;
+//
+// function num(...num) {
+//     for (let i = 0; i < num.length; i++) {
+//         for (let j = 0; j < i; j++) {
+//             if (num[i] + num[j] === s) {
+//                 console.log(num[i]);
+//                 console.log(num[j]);
+//                 // console.log(num[i] + num[j]);
+//                 k++
+//                 console.log("yes");
+//             }
+//         }
+//     }
+// }
+//
+// num(1, 2, 3, 4, 5, 6,4, 7, 9, 1, 6, 9, 2);
+// console.log(k);
 
 // Без двух нулей
 // Даны числа a и b. Определите, сколько существует
 // последовательностей из a нулей и b единиц, в которых никакие два нуля не стоят рядом.
 
-
-let recF = (a, b) => {
-    if (a > b + 1) {
-        return 0;
-    }
-    if (a === 0 || b === 0) {
-        return 1
-    }
-    return recF(a, b - 1) + recF(a - 1, b - 1);
-
-
-};
-console.log(recF(2, 3));;
+//
+// let recF = (a, b) => {
+//     if (a > b + 1) {
+//         return 0;
+//     }
+//     if (a === 0 || b === 0) {
+//         return 1
+//     }
+//     return recF(a, b - 1) + recF(a - 1, b - 1);
+//
+//
+// };
+// console.log(recF(2, 3));;
