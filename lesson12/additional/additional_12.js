@@ -98,7 +98,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
                                                 if (comment.postId === post.id) {
                                                     let commentD = document.createElement("div");
                                                     commentD.innerHTML = `
-                                                    <h2>comment to post ${post.id}</h2>
+                                                    <h2>comment ${comment.id} to post ${post.id}</h2>
                                                     <h2>${comment.name}</h2>
                                                     <p>${comment.email}</p>                                                   
                                                     <p>${comment.body}</p>                                                   
