@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .mov {
+            top: 0;
+            left: 0;
+            position: relative;
+            animation-name: delete_element;
+            animation-duration: 5s;
+
+        }
+        @keyframes delete_element {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            30% {
+                box-shadow: -120px -50px 20px black;
+            }
+            80% {
+                background: red;
+            }
+            100% {
+                top: 400px;
+                visibility: hidden;
+                left: 2000px;
+            }
+        }
+    </style>
+</head>
+<body>
+<button id="deleteLocalStorag">clear localStorage</button>
+<script>
+let getItems = localStorage.getItem('items');
+let parseItems = JSON.parse(getItems);
+
+parseItems.forEach(item => {
+    let itemDiv = document.createElement("div");
+
+    let btn = document.createElement("button");
+    btn.id = 'but'
+    itemDiv.style.padding = "20px";
+    itemDiv.style.width = "400px";
+    itemDiv.style.border = "1px solid black";
+    btn.innerText = " Delete ";
+    let stringify = JSON.stringify(item);
+    itemDiv.innerText = stringify.replaceAll(/[ \" \] \[ ]+/g, " ").replaceAll(",", "-");
+    document.body.appendChild(itemDiv);
+    itemDiv.append(btn);
+    btn.onclick = (e) => {
+        itemDiv.classList.add("mov")
+        let index = parseItems.indexOf(item);
+        let splice = parseItems.splice(index,1);
+        console.log(index);
+        console.log(splice);
+        setInterval(function () {
+            localStorage.setItem('items', JSON.stringify(parseItems));
+            return document.location.reload()
+        },4000)
+    };
+});
+
+let btnDelete = document.getElementById("deleteLocalStorag");
+btnDelete.onclick = () => {
+    localStorage.clear();
+   return  document.location.reload()
+}
+
+
+
+</script>
+</body>
+</html>
