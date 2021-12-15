@@ -19,14 +19,16 @@ f1.onsubmit = function (e) {
     let price = this.price.value;
     let img = this.img.value;
     id++;
-    let temporaryArr = [name, quantity, price, img];
+    let temporaryArr = {name, quantity, price, img};
+    let item = localStorage.getItem('user' + id);
+    console.log(JSON.stringify(temporaryArr));
+    let parseArr = JSON.parse(item);
     if (parseArr === null) {
+        arr  =[]
+
         localStorage.setItem('user' + id, JSON.stringify(temporaryArr));
+
     }else {
-
         localStorage.setItem('user' + id, JSON.stringify(temporaryArr));
-
     }
 };
-let item = localStorage.getItem('items');
-let parseArr = JSON.parse(item);

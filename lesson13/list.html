@@ -63,7 +63,7 @@ parseItems.forEach(item => {
     itemDiv.style.border = "1px solid black";
     btn.innerText = " Delete ";
     let stringify = JSON.stringify(item);
-    itemDiv.innerText = stringify.replaceAll(/[ \" \] \[ ]+/g, " ").replaceAll(",", "-");
+    itemDiv.innerText = stringify.replaceAll(/[ \" \] \[ \} \{ ]+/g, " ").replaceAll(",", "-");
     document.body.appendChild(itemDiv);
     itemDiv.append(btn);
     btn.onclick = (e) => {
