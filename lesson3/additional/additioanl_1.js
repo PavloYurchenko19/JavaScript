@@ -1,7 +1,7 @@
 /*За допомогою циклу вивести всю інформацію про пости використовуючи шаблон Template 1.1.
 			* ЗА допомоги стилів побудувати структуру "сітки" по 5 об'єктів в лінію
 			* */
-let user =  [
+let parseUser =  [
     {
         userId: 1,
         id: 1,
@@ -604,11 +604,11 @@ let user =  [
     }
 ];
 document.write(`<div class="wrap">`);
-for (let i = 0; i <= user.length-1 ; i++) {
+for (let i = 0; i <= parseUser.length-1 ; i++) {
 
     document.write(`<div class="post_card">`);
-    document.write(`<h3>${user[i]["id"]} ${user [i]['title']}</h3>`);
-    document.write(`<p>${user[i]["body"]}</p>`)
+    document.write(`<h3>${parseUser[i]["id"]} ${parseUser [i]['title']}</h3>`);
+    document.write(`<p>${parseUser[i]["body"]}</p>`)
     document.write(`</div>`);
 }
 document.write(`</div>`);
