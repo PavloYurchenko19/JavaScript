@@ -21,7 +21,7 @@ f1.onsubmit = function (e) {
     id++;
     let temporaryArr = {name, quantity, price, img};
     let item = localStorage.getItem('user' + id);
-    console.log(JSON.stringify(temporaryArr));
+    // console.log(JSON.stringify(temporaryArr));
     let parseArr = JSON.parse(item);
     if (parseArr === null) {
         arr  =[]
