@@ -41,9 +41,18 @@
 <body>
 <button id="deleteLocalStorag">clear localStorage</button>
 <script>
-let getItems = localStorage.getItem('items');
-let parseItems = JSON.parse(getItems);
+    console.log(localStorage.length);
+    parseItems = [];
 
+    for (let i = 0; i <= localStorage.length-1; i++) {
+        let key1 = localStorage.key(i);
+        let getItems = localStorage.getItem(key1);
+        console.log(getItems);
+
+        let parse = JSON.parse(getItems);
+
+        parseItems.push(parse);
+    }
 parseItems.forEach(item => {
     let itemDiv = document.createElement("div");
 
@@ -59,12 +68,9 @@ parseItems.forEach(item => {
     itemDiv.append(btn);
     btn.onclick = (e) => {
         itemDiv.classList.add("mov")
-        let index = parseItems.indexOf(item);
-        let splice = parseItems.splice(index,1);
-        console.log(index);
-        console.log(splice);
         setInterval(function () {
-            localStorage.setItem('items', JSON.stringify(parseItems));
+            let key = localStorage.key(item);
+            localStorage.removeItem(key)
             return document.location.reload()
         },4000)
     };

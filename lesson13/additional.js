@@ -10,21 +10,21 @@
 //     До кожного товару додати кнопку, при кліку на яку з лс видаляється конкретний обраний  товар
 
 let f1 = document.forms.f1;
-let arr = [];
+let lengthLocalStoreg = localStorage.length;
+let id = lengthLocalStoreg;
 f1.onsubmit = function (e) {
     e.preventDefault();
     let name = this.name.value;
     let quantity = this.quantity.value;
     let price = this.price.value;
     let img = this.img.value;
+    id++;
     let temporaryArr = [name, quantity, price, img];
     if (parseArr === null) {
-        arr.push(temporaryArr);
-        localStorage.setItem('items', JSON.stringify(arr));
+        localStorage.setItem('user' + id, JSON.stringify(temporaryArr));
     }else {
-        parseArr.push(temporaryArr);
 
-        localStorage.setItem('items', JSON.stringify(parseArr));
+        localStorage.setItem('user' + id, JSON.stringify(temporaryArr));
 
     }
 };
