@@ -41,19 +41,9 @@
 <body>
 <button id="deleteLocalStorag">clear localStorage</button>
 <script>
-    console.log(localStorage.length);
-    parseItems = [];
-
-    for (let i = 0; i <= localStorage.length-1; i++) {
-        let key1 = localStorage.key(i);
-        let getItems = localStorage.getItem(key1);
-        console.log(getItems);
-
-        let parse = JSON.parse(getItems);
-
-        parseItems.push(parse);
-    }
-parseItems.forEach(item => {
+let users = localStorage.getItem("users");
+let parseUsers = JSON.parse(users)
+parseUsers.forEach(item => {
     let itemDiv = document.createElement("div");
 
     let btn = document.createElement("button");
@@ -67,20 +57,21 @@ parseItems.forEach(item => {
     document.body.appendChild(itemDiv);
     itemDiv.append(btn);
     btn.onclick = (e) => {
+        // console.log(parseUsers);
+        let splice = parseUsers.splice(item,1);
+        localStorage.setItem('users' , JSON.stringify(parseUsers))
         itemDiv.classList.add("mov")
         setInterval(function () {
-            let key = localStorage.key(item);
-            localStorage.removeItem(key)
-            return document.location.reload()
-        },4000)
+            return document.location.reload();
+        }, 4000)
     };
 });
 
-let btnDelete = document.getElementById("deleteLocalStorag");
-btnDelete.onclick = () => {
-    localStorage.clear();
-   return  document.location.reload()
-}
+    let btnDelete = document.getElementById("deleteLocalStorag");
+    btnDelete.onclick = () => {
+        localStorage.clear();
+        return  document.location.reload()
+    }
 
 
 

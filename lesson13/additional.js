@@ -7,28 +7,31 @@
 // Зберігати товари в масив в локалсорадж. При збережені товару з форми, action не повинно відбуватись (preventDefault)
 // створити елемент <a href='list.html'> На сторінку товарів</a>, та list.html, при переході на який відобразити на сторінці всі товари.
 // На сторінці  list.html побудувати кнопку яка видаляє всі товари з корзини та локалстораджа.
-//     До кожного товару додати кнопку, при кліку на яку з лс видаляється конкретний обраний  товар
-
+//     До кожного товару додати кнопку, при к ліку на яку з лс видаляється конкретний обраний  товар
 let f1 = document.forms.f1;
-let lengthLocalStoreg = localStorage.length;
-let id = lengthLocalStoreg;
+let arr = [];
+localStorage.setItem('users',JSON.stringify(arr))
+let item = localStorage.getItem('users');
+let parseArr = JSON.parse(item);
 f1.onsubmit = function (e) {
+
     e.preventDefault();
+    let data = new Date()
+    let id =data.getTime() ;
     let name = this.name.value;
     let quantity = this.quantity.value;
     let price = this.price.value;
     let img = this.img.value;
-    id++;
-    let temporaryArr = {name, quantity, price, img};
-    let item = localStorage.getItem('user' + id);
-    // console.log(JSON.stringify(temporaryArr));
-    let parseArr = JSON.parse(item);
+    let temporaryArr = {id,name, quantity, price, img};
     if (parseArr === null) {
-        arr  =[]
 
-        localStorage.setItem('user' + id, JSON.stringify(temporaryArr));
+        arr.push(temporaryArr)
+        localStorage.setItem('users' , JSON.stringify(arr));
 
     }else {
-        localStorage.setItem('user' + id, JSON.stringify(temporaryArr));
+
+        arr.push(temporaryArr)
+        localStorage.setItem('users' , JSON.stringify(arr));
     }
+
 };
