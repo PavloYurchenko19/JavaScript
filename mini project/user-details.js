@@ -64,39 +64,49 @@ document.body.append(mainDiv);
 fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
     .then(responce => responce.json())
     .then(posts => {
+        let hiidenDiv = document.createElement("div");
+
         postBtn.onclick = () => {
-            let mainH2Div = document.createElement("div");
-            mainH2Div.style.background = " cornflowerblue";
-            mainH2Div.style.boxShadow = " 0 0 10px black";
-            mainH2Div.style.display = "flex";
-            mainH2Div.style.padding = "20px";
-            mainH2Div.style.flexWrap = "wrap";
-            mainH2Div.style.textAlign = "center";
-            posts.forEach((post) => {
+            if (hiidenDiv.children.length === 0 ) {
+                let mainH2Div = document.createElement("div");
+                mainH2Div.style.background = " cornflowerblue";
+                mainH2Div.style.boxShadow = " 0 0 10px black";
+                mainH2Div.style.display = "flex";
+                mainH2Div.style.padding = "20px";
+                mainH2Div.style.flexWrap = "wrap";
+                mainH2Div.style.textAlign = "center";
+                posts.forEach((post) => {
+                    let h2Div = document.createElement("div");
+                    h2Div.style.width = "19%";
 
-                let h2Div = document.createElement("div");
-                h2Div.style.width = "19%";
-                h2Div.style.background = "green";
-                h2Div.style.border = "1px solid black";
-                h2Div.style.boxSizing = "border-box";
-                h2Div.style.padding = "10px";
-                h2Div.style.margin = "5px auto";
+                    h2Div.style.background = "green";
+                    h2Div.style.border = "1px solid black";
+                    h2Div.style.boxSizing = "border-box";
+                    h2Div.style.padding = "10px";
+                    h2Div.style.margin = "5px auto";
+                    let h2 = document.createElement("h2");
+                    h2.innerText = ` post ${post.id} \n ${post.title}`;
 
-                let h2 = document.createElement("h2");
-                h2.innerText = ` post ${post.id} \n ${post.title}`;
-                let commentBtn = document.createElement("button");
-                commentBtn.innerText = "Open comment to this post ";
-                commentBtn.onclick = () => {
-                    localStorage.setItem('post' , JSON.stringify(post));
-                    document.location = "post-details.html";
+                    let commentBtn = document.createElement("button");
+                    commentBtn.innerText = "Open comment to this post ";
+                    commentBtn.onclick = () => {
+                        localStorage.setItem('post' , JSON.stringify(post));
+                        document.location = "post-details.html";
 
-                };
-                h2Div.append(h2,commentBtn);
+                    };
+                    h2Div.append(h2,commentBtn);
 
-                mainH2Div.append(h2Div);
+                    mainH2Div.append(h2Div);
+                    hiidenDiv.append(mainH2Div);
 
-            });
-            document.body.append(mainH2Div);
+                });
+            }else {
+
+                hiidenDiv.classList.toggle("hidden");
+            }
+
+            console.log(hiidenDiv.children.length);
+            document.body.append(hiidenDiv);
 
         };
 
