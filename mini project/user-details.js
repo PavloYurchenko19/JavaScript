@@ -105,7 +105,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
                 hiidenDiv.classList.toggle("hidden");
             }
 
-            console.log(hiidenDiv.children.length);
             document.body.append(hiidenDiv);
 
         };
