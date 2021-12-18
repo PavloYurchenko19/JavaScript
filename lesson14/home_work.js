@@ -350,246 +350,253 @@ function uxs3() {
     // }
     // dailyRou(true)
 
-// async function routDay() {
-//     let wake1 = await wakeUp();
-//     let wash2 = await wash(wake1);
-//     let breakF3 = await breakFast();
-//     let job4 = await goJob();
-//     let dinner4 = await dinner();
-//     let chill5 = await chill();
-//     let study6 = await study();
-//     let yb7 = await youtube();
-//     let sleep8 = await sleep();
-//     console.log(wake1);
-//     console.log(wash2);
-//     console.log(breakF3);
-//     console.log(job4);
-//     console.log(dinner4);
-//     console.log(chill5);
-//     console.log(study6);
-//     console.log(yb7);
-//     console.log(sleep8);
-//
-// }
-// routDay()
-function sleep(yes = true, cb) {
-    setTimeout(() => {
+async function routDay() {
+    try {
+        let wake1 = await wakeUp();
+        let wash2 = await wash();
+        let breakF3 = await breakFast();
+        let job4 = await goJob(false);
+        let dinner4 = await dinner();
+        let chill5 = await chill();
+        let study6 = await study();
+        let yb7 = await youtube();
+        let sleep8 = await sleep();
+        console.log(wake1);
+        console.log(wash2);
+        console.log(breakF3);
+        console.log(job4);
+        console.log(dinner4);
+        console.log(chill5);
+        console.log(study6);
+        console.log(yb7);
+        console.log(sleep8);
 
-        if (yes) {
-
-            // console.log("then i go to sleep");
-            cb(null,"then i go to sleep")
-            return
-
-        }
-
-        cb("opps");
-    }, 3001);
-
-
-}
-
-function youtube(watch = true, cb) {
-    setTimeout(() => {
-
-        if (watch) {
-
-            // console.log("in the evening i watch youTube ");
-            cb(null,"in the evening i watch youTube ")
-            return
-        }
-
-        cb("opps")
-
-    }, 3000);
-
-
-}
-
-function wakeUp(yes = true, cb) {
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("I wake up ");
-            cb(null,"I wake up ")
-            return
-        }
-
-        cb("ops");
-
-    }, 2040);
-
-}
-
-function study(yes = true, cb) {
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("and i study smt");
-            cb(null,"and i study smt")
-            return
-        }
-        cb('opsss')
-    }, 2600);
-
-
-}
-
-function chill(yes = true, cb) {
-
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("after work i go home and have chill");
-            cb(null, "after work i go home and have chill");
-            return
-        }
-
-        cb("ooppss")
-    }, 2000);
-
-}
-
-function goJob(yes = true, cb) {
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("then i go to my favorite job");
-            cb(null, "then i go to my favorite job");
-            return
-        }
-        cb("eror")
-
-    }, 1400);
-
-
-}
-
-function dinner(yes = true, cb) {
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("during working i have mini pause for dinner");
-            cb(null, "during working i have mini pause for dinner");
-            return
-        }
-        cb("ops");
-
-    }, 1800);
-
-}
-
-
-function breakFast(yes = true, cb) {
-
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("After i have breakfast");
-            cb(null, "After i have breakfast");
-            return;
-
-        }
-
-            cb("ops")
-
-    }, 725);
-
-
-}
-
-function wash(yes = true, cb) {
-    setTimeout(() => {
-
-        if (yes) {
-
-            // console.log("then i go wash my face and brush teeth");
-            cb(null,"then i go wash my face and brush teeth")
-            return
-        }
-        cb("ops")
-    }, 500);
-
-
-}
-
-wakeUp(true, (err,morning) => {
-    if (err) {
-
-        console.log(err);
-        return;
-
+    }catch (err) {
+        console.log("error");
     }
 
-    console.log(morning);
-    wash(true, (err, washF) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
 
-        console.log(washF);
+}
+routDay()
 
-        breakFast(true, (err, breakF) => {
-            if (err) {
-                console.log(err);
-                return
-            }
-            console.log(breakF);
-
-            goJob(true, (err, work) => {
-                if (err) {
-                    console.log(err);
-                    return
-                }
-                console.log(work);
-
-                dinner(true, (err, eat) => {
-                    if (err) {
-                        console.log(err);
-                        return
-                    }
-                    console.log(eat);
-
-                    chill(true, (err, chillHome) => {
-                        if (err) {
-                            console.log(err);
-                            return
-                        }
-                        console.log(chillHome);
-
-                        study(true, (err, learn) => {
-                            if (err) {
-                                console.log(err);
-                                return
-                            }
-                            console.log(learn);
-
-                            youtube(true, (err, youT) => {
-                                if (err) {
-                                    console.log(err);
-                                    return
-                                }
-                                console.log(youT);
-
-                                sleep(true, (err, dream) => {
-                                    if (err) {
-                                        console.log(err);
-                                        return
-                                    }
-                                    console.log(dream);
-                                });
-                            });
-                        });
-                    });
-                });
-            });
-        });
-    });
-});
+// function sleep(yes = true, cb) {
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("then i go to sleep");
+//             cb(null,"then i go to sleep")
+//             return
+//
+//         }
+//
+//         cb("opps");
+//     }, 3001);
+//
+//
+// }
+//
+// function youtube(watch = true, cb) {
+//     setTimeout(() => {
+//
+//         if (watch) {
+//
+//             // console.log("in the evening i watch youTube ");
+//             cb(null,"in the evening i watch youTube ")
+//             return
+//         }
+//
+//         cb("opps")
+//
+//     }, 3000);
+//
+//
+// }
+//
+// function wakeUp(yes = true, cb) {
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("I wake up ");
+//             cb(null,"I wake up ")
+//             return
+//         }
+//
+//         cb("ops");
+//
+//     }, 2040);
+//
+// }
+//
+// function study(yes = true, cb) {
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("and i study smt");
+//             cb(null,"and i study smt")
+//             return
+//         }
+//         cb('opsss')
+//     }, 2600);
+//
+//
+// }
+//
+// function chill(yes = true, cb) {
+//
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("after work i go home and have chill");
+//             cb(null, "after work i go home and have chill");
+//             return
+//         }
+//
+//         cb("ooppss")
+//     }, 2000);
+//
+// }
+//
+// function goJob(yes = true, cb) {
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("then i go to my favorite job");
+//             cb(null, "then i go to my favorite job");
+//             return
+//         }
+//         cb("eror")
+//
+//     }, 1400);
+//
+//
+// }
+//
+// function dinner(yes = true, cb) {
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("during working i have mini pause for dinner");
+//             cb(null, "during working i have mini pause for dinner");
+//             return
+//         }
+//         cb("ops");
+//
+//     }, 1800);
+//
+// }
+//
+//
+// function breakFast(yes = true, cb) {
+//
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("After i have breakfast");
+//             cb(null, "After i have breakfast");
+//             return;
+//
+//         }
+//
+//             cb("ops")
+//
+//     }, 725);
+//
+//
+// }
+//
+// function wash(yes = true, cb) {
+//     setTimeout(() => {
+//
+//         if (yes) {
+//
+//             // console.log("then i go wash my face and brush teeth");
+//             cb(null,"then i go wash my face and brush teeth")
+//             return
+//         }
+//         cb("ops")
+//     }, 500);
+//
+//
+// }
+//
+// wakeUp(true, (err,morning) => {
+//     if (err) {
+//
+//         console.log(err);
+//         return;
+//
+//     }
+//
+//     console.log(morning);
+//     wash(true, (err, washF) => {
+//         if (err) {
+//             console.log(err);
+//             return;
+//         }
+//
+//         console.log(washF);
+//
+//         breakFast(true, (err, breakF) => {
+//             if (err) {
+//                 console.log(err);
+//                 return
+//             }
+//             console.log(breakF);
+//
+//             goJob(true, (err, work) => {
+//                 if (err) {
+//                     console.log(err);
+//                     return
+//                 }
+//                 console.log(work);
+//
+//                 dinner(true, (err, eat) => {
+//                     if (err) {
+//                         console.log(err);
+//                         return
+//                     }
+//                     console.log(eat);
+//
+//                     chill(true, (err, chillHome) => {
+//                         if (err) {
+//                             console.log(err);
+//                             return
+//                         }
+//                         console.log(chillHome);
+//
+//                         study(true, (err, learn) => {
+//                             if (err) {
+//                                 console.log(err);
+//                                 return
+//                             }
+//                             console.log(learn);
+//
+//                             youtube(true, (err, youT) => {
+//                                 if (err) {
+//                                     console.log(err);
+//                                     return
+//                                 }
+//                                 console.log(youT);
+//
+//                                 sleep(true, (err, dream) => {
+//                                     if (err) {
+//                                         console.log(err);
+//                                         return
+//                                     }
+//                                     console.log(dream);
+//                                 });
+//                             });
+//                         });
+//                     });
+//                 });
+//             });
+//         });
+//     });
+// });
